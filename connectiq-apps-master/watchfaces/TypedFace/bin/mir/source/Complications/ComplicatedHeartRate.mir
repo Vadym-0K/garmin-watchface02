@@ -1,0 +1,94 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 6; ]
+import Toybox.Application;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 7; ]
+import Toybox.Activity;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 8; ]
+import Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 9; ]
+import Toybox.Graphics;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 10; ]
+import Toybox.System;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 12; ]
+module Complicated {
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 12; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 15; ]
+    class HeartRate{
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 15; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 15; ]
+        static
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 17; @position = 20; ]
+        private
+        var _icon as BitmapType;
+        //! Constructor
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 20; ]
+        public
+        function initialize() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_20_37_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc" 21 12 ]
+            %tmp.1 = getm $.Toybox.Application;
+            %tmp.2 = getv function %tmp.1 :loadResource;
+            %tmp.4 = getv ? :Rez;
+            %tmp.5 = getv %tmp.4 :Drawables;
+            %tmp.6 = getv %tmp.5 :heart;
+            %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.6);
+            putv self :_icon %tmp.7;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_20_37_stop:
+        }
+        //! Update the model
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 25; ]
+        public
+        function updateModel() as Complicated.Model {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_25_59_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc" 26 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_25_59_stop" ]
+            %info.1 = local;
+            %tmp.1 = getm $.Toybox.Activity;
+            %tmp.2 = getv function %tmp.1 :getActivityInfo;
+            %tmp.3 = invoke %tmp.1 %tmp.2();
+            lputv %info.1 %tmp.3;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc" 27 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_25_59_stop" ]
+            %hr.2 = local;
+            %tmp.4 = lgetv %info.1;
+            %tmp.5 = getv %tmp.4 :currentHeartRate;
+            lputv %hr.2 %tmp.5;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc" 29 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_25_59_stop" ]
+            %hrString.3 = local;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_begin:
+            %tmp.7 = lgetv %hr.2;
+            %tmp.8 = null;
+            %tmp.9 = eq %tmp.7 %tmp.8;
+            bf %tmp.9 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_false;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_true:
+            %tmp.10 = "--";
+            push %tmp.10;
+            goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_false:
+            %tmp.11 = lgetv %hr.2;
+            %tmp.12 = as %tmp.11 { (!Null) };
+            %tmp.13 = getv function %tmp.12 :toString;
+            %tmp.14 = invoke %tmp.12 %tmp.13();
+            push %tmp.14;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_end:
+            %tmp.15 = phi [%tmp.9 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_begin] [%tmp.10 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_true] [%tmp.14 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_false] [%tmp.15 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_29_27_end];
+            lputv %hrString.3 %tmp.15;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc" 31 12 ]
+            %tmp.19 = getv ? :LabelModel;
+            %tmp.21 = lgetv %hrString.3;
+            %tmp.23 = getv ? :_icon;
+            %tmp.16 = newc %tmp.19 (%tmp.21, %tmp.23);
+            ret %tmp.16;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedHeartRate_mc_25_59_stop:
+        }
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedHeartRate.mc"; @line = 6; ]
+<init> {
+}

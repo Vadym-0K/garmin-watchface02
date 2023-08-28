@@ -1,0 +1,89 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 6; ]
+import Toybox.Application;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 7; ]
+import Toybox.Time.Gregorian;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 8; ]
+import Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 9; ]
+import Toybox.Graphics;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 10; ]
+import Toybox.System;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 12; ]
+module Complicated {
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 12; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 15; ]
+    class Date{
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 15; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 15; ]
+        static
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 17; @position = 20; ]
+        private
+        var _icon as BitmapType;
+        //! Constructor
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 20; ]
+        public
+        function initialize() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDate_mc_20_37_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc" 21 12 ]
+            %tmp.1 = getm $.Toybox.Application;
+            %tmp.2 = getv function %tmp.1 :loadResource;
+            %tmp.4 = getv ? :Rez;
+            %tmp.5 = getv %tmp.4 :Drawables;
+            %tmp.6 = getv %tmp.5 :calendar;
+            %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.6);
+            putv self :_icon %tmp.7;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDate_mc_20_37_stop:
+        }
+        //! Update the model
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 25; ]
+        public
+        function updateModel() as Complicated.Model {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDate_mc_25_59_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc" 26 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDate_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDate_mc_25_59_stop" ]
+            %info.1 = local;
+            %tmp.1 = getm $.Toybox.Time.Gregorian;
+            %tmp.2 = getv function %tmp.1 :info;
+            %tmp.4 = getv ? :Time;
+            %tmp.5 = getv function %tmp.4 :now;
+            %tmp.6 = invoke %tmp.4 %tmp.5();
+            %tmp.7 = getm $.Toybox.Time.Gregorian;
+            %tmp.8 = getv %tmp.7 :FORMAT_SHORT;
+            %tmp.9 = invoke %tmp.1 %tmp.2(%tmp.6, %tmp.8);
+            lputv %info.1 %tmp.9;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc" 27 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDate_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDate_mc_25_59_stop" ]
+            %dateString.2 = local;
+            %tmp.10 = getm $.Toybox.Lang;
+            %tmp.11 = getv function %tmp.10 :format;
+            %tmp.12 = "$1$/$2$";
+            %tmp.13 = newa 2;
+            %tmp.14 = lgetv %info.1;
+            %tmp.15 = getv %tmp.14 :month;
+            %tmp.16 = dup %tmp.13;
+            %tmp.17 = aputv %tmp.16 0 %tmp.15;
+            %tmp.18 = lgetv %info.1;
+            %tmp.19 = getv %tmp.18 :day;
+            %tmp.20 = dup %tmp.17;
+            %tmp.21 = aputv %tmp.20 1 %tmp.19;
+            %tmp.22 = invoke %tmp.10 %tmp.11(%tmp.12, %tmp.21);
+            lputv %dateString.2 %tmp.22;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc" 28 12 ]
+            %tmp.26 = getv ? :LabelModel;
+            %tmp.28 = lgetv %dateString.2;
+            %tmp.30 = getv ? :_icon;
+            %tmp.23 = newc %tmp.26 (%tmp.28, %tmp.30);
+            ret %tmp.23;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDate_mc_25_59_stop:
+        }
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDate.mc"; @line = 6; ]
+<init> {
+}

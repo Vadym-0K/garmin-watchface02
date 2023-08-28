@@ -1,0 +1,84 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 6; ]
+import Toybox.Application;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 7; ]
+import Toybox.ActivityMonitor;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 8; ]
+import Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 9; ]
+import Toybox.Graphics;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 10; ]
+import Toybox.System;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 12; ]
+module Complicated {
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 12; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 15; ]
+    class Steps{
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 15; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 15; ]
+        static
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 17; @position = 20; ]
+        private
+        var _icon as BitmapType;
+        //! Constructor
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 20; ]
+        public
+        function initialize() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedSteps_mc_20_37_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc" 21 12 ]
+            %tmp.1 = getm $.Toybox.Application;
+            %tmp.2 = getv function %tmp.1 :loadResource;
+            %tmp.4 = getv ? :Rez;
+            %tmp.5 = getv %tmp.4 :Drawables;
+            %tmp.6 = getv %tmp.5 :steps;
+            %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.6);
+            putv self :_icon %tmp.7;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedSteps_mc_20_37_stop:
+        }
+        //! Update the model
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 25; ]
+        public
+        function updateModel() as Complicated.Model {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedSteps_mc_25_59_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc" 26 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedSteps_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedSteps_mc_25_59_stop" ]
+            %info.1 = local;
+            %tmp.1 = getm $.Toybox.ActivityMonitor;
+            %tmp.2 = getv function %tmp.1 :getInfo;
+            %tmp.3 = invoke %tmp.1 %tmp.2();
+            lputv %info.1 %tmp.3;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc" 27 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedSteps_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedSteps_mc_25_59_stop" ]
+            %stepsPercent.2 = local;
+            %tmp.4 = lgetv %info.1;
+            %tmp.5 = getv %tmp.4 :steps;
+            %tmp.6 = getv function %tmp.5 :toFloat;
+            %tmp.7 = invoke %tmp.5 %tmp.6();
+            %tmp.8 = lgetv %info.1;
+            %tmp.9 = getv %tmp.8 :stepGoal;
+            %tmp.10 = getv function %tmp.9 :toFloat;
+            %tmp.11 = invoke %tmp.9 %tmp.10();
+            %tmp.12 = div %tmp.7 %tmp.11;
+            %tmp.13 = 100;
+            %tmp.14 = mul %tmp.12 %tmp.13;
+            lputv %stepsPercent.2 %tmp.14;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc" 28 12 ]
+            %tmp.18 = getv ? :PercentModel;
+            %tmp.19 = lgetv %stepsPercent.2;
+            %tmp.20 = getv function %tmp.19 :toNumber;
+            %tmp.21 = invoke %tmp.19 %tmp.20();
+            %tmp.23 = getv ? :_icon;
+            %tmp.15 = newc %tmp.18 (%tmp.21, %tmp.23);
+            ret %tmp.15;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedSteps_mc_25_59_stop:
+        }
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedSteps.mc"; @line = 6; ]
+<init> {
+}

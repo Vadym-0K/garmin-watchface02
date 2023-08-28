@@ -1,0 +1,188 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 6; ]
+import Toybox.Application;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 7; ]
+import Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 8; ]
+import Toybox.Graphics;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 9; ]
+import Toybox.System;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 11; ]
+module Complicated {
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 11; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 14; ]
+    class Battery{
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 14; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 14; ]
+        static
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 17; ]
+        static
+        enum BatteryStates {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 18; @position = 12; ]
+            BATTERY_QUARTER,
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 19; @position = 12; ]
+            BATTERY_HALF,
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 20; @position = 12; ]
+            BATTERY_FULL,
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 21; @position = 12; ]
+            BATTERY_CHARGING,
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 22; @position = 12; ]
+            BATTERY_MAX
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 26; @position = 20; ]
+        private
+        var _icons as Array<BitmapType>;
+        //! Constructor
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 29; ]
+        public
+        function initialize() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_29_37_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 30 12 ]
+            %tmp.3 = getv ? :BATTERY_MAX;
+            %tmp.1 = newa Array<BitmapType> %tmp.3;
+            putv self :_icons %tmp.1;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 32 12 ]
+            %tmp.4 = getv self :_icons;
+            %tmp.5 = getm $.Toybox.Application;
+            %tmp.6 = getv function %tmp.5 :loadResource;
+            %tmp.8 = getv ? :Rez;
+            %tmp.9 = getv %tmp.8 :Drawables;
+            %tmp.10 = getv %tmp.9 :batteryQuarter;
+            %tmp.11 = invoke %tmp.5 %tmp.6(%tmp.10);
+            %tmp.13 = getv ? :BATTERY_QUARTER;
+            aputv %tmp.4 %tmp.13 %tmp.11;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 33 12 ]
+            %tmp.14 = getv self :_icons;
+            %tmp.15 = getm $.Toybox.Application;
+            %tmp.16 = getv function %tmp.15 :loadResource;
+            %tmp.18 = getv ? :Rez;
+            %tmp.19 = getv %tmp.18 :Drawables;
+            %tmp.20 = getv %tmp.19 :batteryHalf;
+            %tmp.21 = invoke %tmp.15 %tmp.16(%tmp.20);
+            %tmp.23 = getv ? :BATTERY_HALF;
+            aputv %tmp.14 %tmp.23 %tmp.21;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 34 12 ]
+            %tmp.24 = getv self :_icons;
+            %tmp.25 = getm $.Toybox.Application;
+            %tmp.26 = getv function %tmp.25 :loadResource;
+            %tmp.28 = getv ? :Rez;
+            %tmp.29 = getv %tmp.28 :Drawables;
+            %tmp.30 = getv %tmp.29 :batteryFull;
+            %tmp.31 = invoke %tmp.25 %tmp.26(%tmp.30);
+            %tmp.33 = getv ? :BATTERY_FULL;
+            aputv %tmp.24 %tmp.33 %tmp.31;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 35 12 ]
+            %tmp.34 = getv self :_icons;
+            %tmp.35 = getm $.Toybox.Application;
+            %tmp.36 = getv function %tmp.35 :loadResource;
+            %tmp.38 = getv ? :Rez;
+            %tmp.39 = getv %tmp.38 :Drawables;
+            %tmp.40 = getv %tmp.39 :batteryCharging;
+            %tmp.41 = invoke %tmp.35 %tmp.36(%tmp.40);
+            %tmp.43 = getv ? :BATTERY_CHARGING;
+            aputv %tmp.34 %tmp.43 %tmp.41;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_29_37_stop:
+        }
+        //! Update the model
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 39; ]
+        public
+        function updateModel() as Complicated.Model {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_39_59_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 40 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_39_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_39_59_stop" ]
+            %stats.1 = local;
+            %tmp.1 = getm $.Toybox.System;
+            %tmp.2 = getv function %tmp.1 :getSystemStats;
+            %tmp.3 = invoke %tmp.1 %tmp.2();
+            lputv %stats.1 %tmp.3;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 41 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_39_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_39_59_stop" ]
+            %battery.2 = local;
+            %tmp.4 = lgetv %stats.1;
+            %tmp.5 = getv %tmp.4 :battery;
+            lputv %battery.2 %tmp.5;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 42 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_39_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_39_59_stop" ]
+            %icon.3 = local;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 44 12 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_44_12_if_stmt:
+            %tmp.6 = lgetv %stats.1;
+            %tmp.7 = getv %tmp.6 :charging;
+            bf %tmp.7 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_44_12_if_false;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_44_12_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_44_32_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 45 16 ]
+            %tmp.9 = getv ? :BATTERY_CHARGING;
+            lputv %icon.3 %tmp.9;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_44_32_stop:
+            goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_44_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_44_12_if_false:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 46 19 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_46_19_if_stmt:
+            %tmp.11 = lgetv %battery.2;
+            %tmp.12 = 60;
+            %tmp.13 = gt %tmp.11 %tmp.12;
+            bf %tmp.13 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_46_19_if_false;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_46_19_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_46_37_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 47 16 ]
+            %tmp.15 = getv ? :BATTERY_FULL;
+            lputv %icon.3 %tmp.15;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_46_37_stop:
+            goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_46_19_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_46_19_if_false:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 48 19 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_19_if_stmt:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_23_begin:
+            %tmp.17 = lgetv %battery.2;
+            %tmp.18 = 25;
+            %tmp.19 = gt %tmp.17 %tmp.18;
+            %tmp.20 = dup %tmp.19;
+            bf %tmp.20 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_39_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_39_true:
+            %tmp.22 = lgetv %battery.2;
+            %tmp.23 = 60;
+            %tmp.24 = lte %tmp.22 %tmp.23;
+            %tmp.25 = and %tmp.19 %tmp.24;
+            push %tmp.25;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_39_end:
+            %tmp.26 = phi [%tmp.20 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_23_begin] [%tmp.25 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_39_true] [%tmp.26 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_39_end];
+            bf %tmp.26 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_19_if_false;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_19_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_54_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 49 16 ]
+            %tmp.28 = getv ? :BATTERY_HALF;
+            lputv %icon.3 %tmp.28;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_54_stop:
+            goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_19_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_19_if_false:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_50_19_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 51 16 ]
+            %tmp.30 = getv ? :BATTERY_QUARTER;
+            lputv %icon.3 %tmp.30;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_50_19_stop:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_48_19_if_end:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_46_19_if_end:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_44_12_if_end:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc" 55 12 ]
+            %tmp.34 = getv ? :PercentModel;
+            %tmp.35 = lgetv %battery.2;
+            %tmp.36 = getv function %tmp.35 :toNumber;
+            %tmp.37 = invoke %tmp.35 %tmp.36();
+            %tmp.39 = getv ? :_icons;
+            %tmp.41 = lgetv %icon.3;
+            %tmp.42 = agetv %tmp.39 %tmp.41;
+            %tmp.31 = newc %tmp.34 (%tmp.37, %tmp.42);
+            ret %tmp.31;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedBattery_mc_39_59_stop:
+        }
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedBattery.mc"; @line = 6; ]
+<init> {
+}

@@ -1,0 +1,259 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var batteryFull as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 10; @position = 27; initialized = true; ]
+        var batteryHalf as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 11; @position = 27; initialized = true; ]
+        var batteryQuarter as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 12; @position = 27; initialized = true; ]
+        var batteryCharging as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; ]
+        var steps as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; ]
+        var calendar as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; ]
+        var activeMinutes as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 16; @position = 27; initialized = true; ]
+        var heart as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 17; @position = 27; initialized = true; ]
+        var complication as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 18; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 21; ]
+    module Fonts {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 21; ]
+        <init> {
+        }
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 24; ]
+    module JsonData {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 24; ]
+        <init> {
+        }
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 27; ]
+    module Layouts {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 27; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 28; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen" 29 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_stop" ]
+            %rez_cmp_local_custom_drawable_32577610420229918273.1 = local;
+            %tmp.4 = getv ? :Background;
+            %tmp.1 = newc %tmp.4 ();
+            lputv %rez_cmp_local_custom_drawable_32577610420229918273.1 %tmp.1;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen" 31 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_stop" ]
+            %rez_cmp_local_custom_drawable_Complication1.2 = local;
+            %tmp.8 = getv ? :Complicated;
+            %tmp.9 = getv function ? %tmp.8 :ComplicationDrawable;
+            %tmp.10 = newd 3;
+            %tmp.12 = const :identifier;
+            %tmp.13 = "Complication1";
+            %tmp.14 = dup %tmp.10;
+            %tmp.15 = aputv %tmp.14 %tmp.12 %tmp.13;
+            %tmp.17 = const :locX;
+            %tmp.18 = 240;
+            %tmp.19 = 2;
+            %tmp.20 = div %tmp.18 %tmp.19;
+            %tmp.21 = dup %tmp.15;
+            %tmp.22 = aputv %tmp.21 %tmp.17 %tmp.20;
+            %tmp.24 = const :locY;
+            %tmp.25 = 240;
+            %tmp.26 = .12;
+            %tmp.27 = mul %tmp.25 %tmp.26;
+            %tmp.28 = dup %tmp.22;
+            %tmp.29 = aputv %tmp.28 %tmp.24 %tmp.27;
+            %tmp.5 = newc %tmp.9 (%tmp.29);
+            lputv %rez_cmp_local_custom_drawable_Complication1.2 %tmp.5;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen" 33 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_stop" ]
+            %rez_cmp_local_custom_drawable_Complication2.3 = local;
+            %tmp.33 = getv ? :Complicated;
+            %tmp.34 = getv function ? %tmp.33 :ComplicationDrawable;
+            %tmp.35 = newd 3;
+            %tmp.37 = const :identifier;
+            %tmp.38 = "Complication2";
+            %tmp.39 = dup %tmp.35;
+            %tmp.40 = aputv %tmp.39 %tmp.37 %tmp.38;
+            %tmp.42 = const :locX;
+            %tmp.43 = 240;
+            %tmp.44 = .88;
+            %tmp.45 = mul %tmp.43 %tmp.44;
+            %tmp.46 = dup %tmp.40;
+            %tmp.47 = aputv %tmp.46 %tmp.42 %tmp.45;
+            %tmp.49 = const :locY;
+            %tmp.50 = 240;
+            %tmp.51 = 2;
+            %tmp.52 = div %tmp.50 %tmp.51;
+            %tmp.53 = dup %tmp.47;
+            %tmp.54 = aputv %tmp.53 %tmp.49 %tmp.52;
+            %tmp.30 = newc %tmp.34 (%tmp.54);
+            lputv %rez_cmp_local_custom_drawable_Complication2.3 %tmp.30;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen" 35 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_stop" ]
+            %rez_cmp_local_custom_drawable_Complication3.4 = local;
+            %tmp.58 = getv ? :Complicated;
+            %tmp.59 = getv function ? %tmp.58 :ComplicationDrawable;
+            %tmp.60 = newd 3;
+            %tmp.62 = const :identifier;
+            %tmp.63 = "Complication3";
+            %tmp.64 = dup %tmp.60;
+            %tmp.65 = aputv %tmp.64 %tmp.62 %tmp.63;
+            %tmp.67 = const :locX;
+            %tmp.68 = 240;
+            %tmp.69 = 2;
+            %tmp.70 = div %tmp.68 %tmp.69;
+            %tmp.71 = dup %tmp.65;
+            %tmp.72 = aputv %tmp.71 %tmp.67 %tmp.70;
+            %tmp.74 = const :locY;
+            %tmp.75 = 240;
+            %tmp.76 = .88;
+            %tmp.77 = mul %tmp.75 %tmp.76;
+            %tmp.78 = dup %tmp.72;
+            %tmp.79 = aputv %tmp.78 %tmp.74 %tmp.77;
+            %tmp.55 = newc %tmp.59 (%tmp.79);
+            lputv %rez_cmp_local_custom_drawable_Complication3.4 %tmp.55;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen" 37 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_stop" ]
+            %rez_cmp_local_text_TimeLabel.5 = local;
+            %tmp.82 = getm $.Toybox.WatchUi;
+            %tmp.83 = getv function ? %tmp.82 :Text;
+            %tmp.84 = newd 6;
+            %tmp.86 = const :identifier;
+            %tmp.87 = "TimeLabel";
+            %tmp.88 = dup %tmp.84;
+            %tmp.89 = aputv %tmp.88 %tmp.86 %tmp.87;
+            %tmp.91 = const :color;
+            %tmp.92 = getm $.Toybox.Graphics;
+            %tmp.93 = getv %tmp.92 :COLOR_BLUE;
+            %tmp.94 = dup %tmp.89;
+            %tmp.95 = aputv %tmp.94 %tmp.91 %tmp.93;
+            %tmp.97 = const :locX;
+            %tmp.98 = 240;
+            %tmp.99 = 0.5;
+            %tmp.100 = mul %tmp.98 %tmp.99;
+            %tmp.101 = dup %tmp.95;
+            %tmp.102 = aputv %tmp.101 %tmp.97 %tmp.100;
+            %tmp.104 = const :locY;
+            %tmp.105 = 240;
+            %tmp.106 = lgetv %dc;
+            %tmp.107 = getv function %tmp.106 :getFontHeight;
+            %tmp.108 = getm $.Toybox.Graphics;
+            %tmp.109 = getv %tmp.108 :FONT_NUMBER_HOT;
+            %tmp.110 = invoke %tmp.106 %tmp.107(%tmp.109);
+            %tmp.111 = sub %tmp.105 %tmp.110;
+            %tmp.112 = 0.5;
+            %tmp.113 = mul %tmp.111 %tmp.112;
+            %tmp.114 = dup %tmp.102;
+            %tmp.115 = aputv %tmp.114 %tmp.104 %tmp.113;
+            %tmp.117 = const :justification;
+            %tmp.118 = getm $.Toybox.Graphics;
+            %tmp.119 = getv %tmp.118 :TEXT_JUSTIFY_CENTER;
+            %tmp.120 = dup %tmp.115;
+            %tmp.121 = aputv %tmp.120 %tmp.117 %tmp.119;
+            %tmp.123 = const :font;
+            %tmp.124 = getm $.Toybox.Graphics;
+            %tmp.125 = getv %tmp.124 :FONT_NUMBER_HOT;
+            %tmp.126 = dup %tmp.121;
+            %tmp.127 = aputv %tmp.126 %tmp.123 %tmp.125;
+            %tmp.80 = newc %tmp.83 (%tmp.127);
+            lputv %rez_cmp_local_text_TimeLabel.5 %tmp.80;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen" 39 12 ]
+            %tmp.128 = newa Array<WatchUi.Drawable> 5;
+            %tmp.130 = lgetv %rez_cmp_local_custom_drawable_32577610420229918273.1;
+            %tmp.131 = dup %tmp.128;
+            %tmp.132 = aputv %tmp.131 0 %tmp.130;
+            %tmp.134 = lgetv %rez_cmp_local_custom_drawable_Complication1.2;
+            %tmp.135 = dup %tmp.132;
+            %tmp.136 = aputv %tmp.135 1 %tmp.134;
+            %tmp.138 = lgetv %rez_cmp_local_custom_drawable_Complication2.3;
+            %tmp.139 = dup %tmp.136;
+            %tmp.140 = aputv %tmp.139 2 %tmp.138;
+            %tmp.142 = lgetv %rez_cmp_local_custom_drawable_Complication3.4;
+            %tmp.143 = dup %tmp.140;
+            %tmp.144 = aputv %tmp.143 3 %tmp.142;
+            %tmp.146 = lgetv %rez_cmp_local_text_TimeLabel.5;
+            %tmp.147 = dup %tmp.144;
+            %tmp.148 = aputv %tmp.147 4 %tmp.146;
+            ret %tmp.148;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_bin_gen_006_B3113_00_source_Rez_mcgen_28_73_stop:
+        }
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 43; ]
+    module Menus {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 43; ]
+        <init> {
+        }
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 46; ]
+    module Strings {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 46; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 47; @position = 27; initialized = true; ]
+        var Steps as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 48; @position = 27; initialized = true; ]
+        var ColorLightGray as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 49; @position = 27; initialized = true; ]
+        var ColorBlue as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 50; @position = 27; initialized = true; ]
+        var HeartRate as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 51; @position = 27; initialized = true; ]
+        var BackgroundColorTitle as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 52; @position = 27; initialized = true; ]
+        var Complication1 as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 53; @position = 27; initialized = true; ]
+        var Complication2 as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 54; @position = 27; initialized = true; ]
+        var ColorDarkGray as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 55; @position = 27; initialized = true; ]
+        var Complication3 as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 56; @position = 27; initialized = true; ]
+        var MilitaryFormatTitle as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 57; @position = 27; initialized = true; ]
+        var ColorBlack as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 58; @position = 27; initialized = true; ]
+        var Date as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 59; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 60; @position = 27; initialized = true; ]
+        var ColorRed as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 61; @position = 27; initialized = true; ]
+        var ForegroundColorTitle as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 62; @position = 27; initialized = true; ]
+        var ActiveMinutes as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 63; @position = 27; initialized = true; ]
+        var Battery as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 64; @position = 27; initialized = true; ]
+        var ColorWhite as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 65; @position = 27; initialized = true; ]
+        var None as Symbol;
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

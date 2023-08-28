@@ -1,0 +1,64 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc"; @line = 1; ]
+using Toybox.WatchUi;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc"; @line = 5; ]
+class DanceDanceAnimationDelegate extends WatchUi.AnimationDelegate{
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc"; @line = 6; @position = 8; ]
+    var _controller;
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc"; @line = 9; ]
+    function initialize(controller) as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_9_36_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc" 10 8 ]
+        %tmp.2 = getv ? :AnimationDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc" 11 8 ]
+        %tmp.5 = lgetv %controller;
+        putv self :_controller %tmp.5;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_9_36_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc"; @line = 15; ]
+    function onAnimationEvent(event, options) {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_15_46_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc" 16 8 ]
+        %tmp.2 = lgetv %event;
+        push %tmp.2;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_16_8_switchStmtBegin:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc" 17 12 ]
+        %tmp.3 = dup %tmp.2;
+        %tmp.4 = getm $.Toybox.WatchUi;
+        %tmp.5 = getv %tmp.4 :ANIMATION_EVENT_COMPLETE;
+        %tmp.6 = getv function %tmp.3 :equals;
+        %tmp.7 = invoke %tmp.3 %tmp.6 (%tmp.5);
+        bt %tmp.7 @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_17_12_switchCase;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc" 18 12 ]
+        %tmp.8 = dup %tmp.2;
+        %tmp.9 = getm $.Toybox.WatchUi;
+        %tmp.10 = getv %tmp.9 :ANIMATION_EVENT_CANCELED;
+        %tmp.11 = getv function %tmp.8 :equals;
+        %tmp.12 = invoke %tmp.8 %tmp.11 (%tmp.10);
+        bt %tmp.12 @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_18_12_switchCase;
+        goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_16_8_defaultCodeBegin;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_17_12_switchCase:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_18_12_switchCase:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc" 19 16 ]
+        %tmp.14 = getv ? :_controller;
+        %tmp.15 = getv function %tmp.14 :stop;
+        invoke %tmp.14 %tmp.15();
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc" 20 16 ]
+        goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_16_8_switchStmtEnd;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_16_8_defaultCodeBegin:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_16_8_switchStmtEnd:
+        pop;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceAnimationDelegate_mc_15_46_stop:
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceAnimationDelegate.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,67 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var batteryFull as Symbol;
+        (:initialized) var batteryHalf as Symbol;
+        (:initialized) var batteryQuarter as Symbol;
+        (:initialized) var batteryCharging as Symbol;
+        (:initialized) var steps as Symbol;
+        (:initialized) var calendar as Symbol;
+        (:initialized) var activeMinutes as Symbol;
+        (:initialized) var heart as Symbol;
+        (:initialized) var complication as Symbol;
+        (:initialized) var LauncherIcon as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_custom_drawable_32577610420229918273 = new Background();
+
+            var rez_cmp_local_custom_drawable_Complication1 = new Complicated.ComplicationDrawable({:identifier=>"Complication1", :locX=>240 / 2, :locY=>240 * .12});
+
+            var rez_cmp_local_custom_drawable_Complication2 = new Complicated.ComplicationDrawable({:identifier=>"Complication2", :locX=>240 * .88 , :locY=>240 / 2});
+
+            var rez_cmp_local_custom_drawable_Complication3 = new Complicated.ComplicationDrawable({:identifier=>"Complication3", :locX=>240 / 2 , :locY=>240 * .88});
+
+            var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :color=>Graphics.COLOR_BLUE, :locX=>(240 * 0.5), :locY=>((240 - dc.getFontHeight(Graphics.FONT_NUMBER_HOT)) * 0.5), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_HOT});
+
+            return [rez_cmp_local_custom_drawable_32577610420229918273, rez_cmp_local_custom_drawable_Complication1, rez_cmp_local_custom_drawable_Complication2, rez_cmp_local_custom_drawable_Complication3, rez_cmp_local_text_TimeLabel] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Menus {
+    } // Menus
+
+    module Strings {
+        (:initialized) var Steps as Symbol;
+        (:initialized) var ColorLightGray as Symbol;
+        (:initialized) var ColorBlue as Symbol;
+        (:initialized) var HeartRate as Symbol;
+        (:initialized) var BackgroundColorTitle as Symbol;
+        (:initialized) var Complication1 as Symbol;
+        (:initialized) var Complication2 as Symbol;
+        (:initialized) var ColorDarkGray as Symbol;
+        (:initialized) var Complication3 as Symbol;
+        (:initialized) var MilitaryFormatTitle as Symbol;
+        (:initialized) var ColorBlack as Symbol;
+        (:initialized) var Date as Symbol;
+        (:initialized) var AppName as Symbol;
+        (:initialized) var ColorRed as Symbol;
+        (:initialized) var ForegroundColorTitle as Symbol;
+        (:initialized) var ActiveMinutes as Symbol;
+        (:initialized) var Battery as Symbol;
+        (:initialized) var ColorWhite as Symbol;
+        (:initialized) var None as Symbol;
+    } // Strings
+} // Rez

@@ -1,0 +1,119 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 6; ]
+import Toybox.Application;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 7; ]
+import Toybox.ActivityMonitor;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 8; ]
+import Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 9; ]
+import Toybox.Graphics;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 10; ]
+import Toybox.System;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 12; ]
+module Complicated {
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 12; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 15; ]
+    class ActiveMinutes{
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 15; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 15; ]
+        static
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 17; @position = 20; ]
+        private
+        var _icon as BitmapType;
+        //! Constructor
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 20; ]
+        public
+        function initialize() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_20_37_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc" 21 12 ]
+            %tmp.1 = getm $.Toybox.Application;
+            %tmp.2 = getv function %tmp.1 :loadResource;
+            %tmp.4 = getv ? :Rez;
+            %tmp.5 = getv %tmp.4 :Drawables;
+            %tmp.6 = getv %tmp.5 :activeMinutes;
+            %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.6);
+            putv self :_icon %tmp.7;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_20_37_stop:
+        }
+        //! Update the model
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 25; ]
+        public
+        function updateModel() as Complicated.Model {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_25_59_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc" 26 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_25_59_stop" ]
+            %info.1 = local;
+            %tmp.1 = getm $.Toybox.ActivityMonitor;
+            %tmp.2 = getv function %tmp.1 :getInfo;
+            %tmp.3 = invoke %tmp.1 %tmp.2();
+            lputv %info.1 %tmp.3;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc" 27 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_25_59_stop" ]
+            %activeMinutesWeek.2 = local;
+            %tmp.4 = lgetv %info.1;
+            %tmp.5 = getv %tmp.4 :activeMinutesWeek;
+            lputv %activeMinutesWeek.2 %tmp.5;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc" 28 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_25_59_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_25_59_stop" ]
+            %activeMinutesPercent.3 = local;
+            %tmp.6 = 0;
+            lputv %activeMinutesPercent.3 %tmp.6;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc" 29 12 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_29_12_if_stmt:
+            %tmp.8 = lgetv %activeMinutesWeek.2;
+            %tmp.9 = null;
+            %tmp.10 = ne %tmp.8 %tmp.9;
+            bf %tmp.10 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_29_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_29_12_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_29_43_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc" 30 16 ]
+            %tmp.11 = lgetv %activeMinutesWeek.2;
+            %tmp.12 = as %tmp.11 { (!Null) };
+            %tmp.13 = getv %tmp.12 :total;
+            %tmp.14 = getv function %tmp.13 :toFloat;
+            %tmp.15 = invoke %tmp.13 %tmp.14();
+            %tmp.16 = lgetv %info.1;
+            %tmp.17 = getv %tmp.16 :activeMinutesWeekGoal;
+            %tmp.18 = getv function %tmp.17 :toFloat;
+            %tmp.19 = invoke %tmp.17 %tmp.18();
+            %tmp.20 = div %tmp.15 %tmp.19;
+            %tmp.21 = 100;
+            %tmp.22 = mul %tmp.20 %tmp.21;
+            lputv %activeMinutesPercent.3 %tmp.22;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_29_43_stop:
+            goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_29_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_29_12_if_end:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc" 33 12 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_33_12_if_stmt:
+            %tmp.24 = lgetv %activeMinutesPercent.3;
+            %tmp.25 = 100.0;
+            %tmp.26 = gt %tmp.24 %tmp.25;
+            bf %tmp.26 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_33_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_33_12_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_33_46_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc" 34 16 ]
+            %tmp.27 = 100.0;
+            lputv %activeMinutesPercent.3 %tmp.27;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_33_46_stop:
+            goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_33_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_33_12_if_end:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc" 36 12 ]
+            %tmp.31 = getv ? :PercentModel;
+            %tmp.32 = lgetv %activeMinutesPercent.3;
+            %tmp.33 = getv function %tmp.32 :toNumber;
+            %tmp.34 = invoke %tmp.32 %tmp.33();
+            %tmp.36 = getv ? :_icon;
+            %tmp.28 = newc %tmp.31 (%tmp.34, %tmp.36);
+            ret %tmp.28;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedActiveMinutes_mc_25_59_stop:
+        }
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedActiveMinutes.mc"; @line = 6; ]
+<init> {
+}

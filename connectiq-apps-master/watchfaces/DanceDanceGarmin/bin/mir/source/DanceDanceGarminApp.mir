@@ -1,0 +1,48 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 1; ]
+using Toybox.Application;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 3; ]
+class DanceDanceGarminApp extends Application.AppBase{
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 4; @position = 16; ]
+    private
+    var _view;
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 6; ]
+    function initialize() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminApp_mc_6_26_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc" 7 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminApp_mc_6_26_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 11; ]
+    function onStart(state) {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 15; ]
+    function onStop(state) {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 19; ]
+    function getInitialView() {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminApp_mc_19_30_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc" 20 8 ]
+        %tmp.4 = getv ? :DanceDanceGarminView;
+        %tmp.1 = newc %tmp.4 ();
+        putv self :_view %tmp.1;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc" 21 8 ]
+        %tmp.5 = newa 1;
+        %tmp.7 = getv ? :_view;
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 0 %tmp.7;
+        ret %tmp.9;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminApp_mc_19_30_stop:
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminApp.mc"; @line = 1; ]
+<init> {
+}

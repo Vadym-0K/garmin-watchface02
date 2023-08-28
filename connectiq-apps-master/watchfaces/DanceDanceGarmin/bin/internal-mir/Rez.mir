@@ -1,0 +1,1460 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 11; ]
+        class background extends WatchUi.Drawable{
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 11; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 11; ]
+            static
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 13; ]
+            function initialize() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_13_34_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 14 16 ]
+                %tmp.2 = getv ? :Drawable;
+                %tmp.3 = getv function %tmp.2 :initialize;
+                %tmp.4 = newd 0;
+                invoke %tmp.2 %tmp.3(%tmp.4);
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_13_34_stop:
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 17; ]
+            function draw(dc as Graphics.Dc) as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_17_53_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 18 16 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_18_16_if_stmt:
+                %tmp.2 = lgetv %self;
+                %tmp.4 = const :isVisible;
+                %tmp.5 = canhazplz %tmp.2 %tmp.4;
+                bf %tmp.5 @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_18_16_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_18_16_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_18_41_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 19 20 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_19_20_if_stmt:
+                %tmp.6 = lgetv %self;
+                %tmp.7 = as %tmp.6 { (interface { var isVisible; }) };
+                %tmp.8 = getv %tmp.7 :isVisible;
+                %tmp.9 = not %tmp.8;
+                bf %tmp.9 @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_19_20_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_19_20_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_19_41_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 20 24 ]
+                ret ?;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_19_41_stop:
+                goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_19_20_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_19_20_if_end:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_18_41_stop:
+                goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_18_16_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_18_16_if_end:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 24 16 ]
+                %tmp.10 = lgetv %dc;
+                %tmp.11 = getv function %tmp.10 :setColor;
+                %tmp.12 = getm $.Toybox.Graphics;
+                %tmp.13 = getv %tmp.12 :COLOR_WHITE;
+                %tmp.14 = getm $.Toybox.Graphics;
+                %tmp.15 = getv %tmp.14 :COLOR_TRANSPARENT;
+                invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 25 16 ]
+                %tmp.16 = lgetv %dc;
+                %tmp.17 = getv function %tmp.16 :fillRectangle;
+                %tmp.18 = 0;
+                %tmp.19 = 0;
+                %tmp.20 = add %tmp.18 %tmp.19;
+                %tmp.21 = 0;
+                %tmp.22 = 0;
+                %tmp.23 = add %tmp.21 %tmp.22;
+                %tmp.24 = 280;
+                %tmp.25 = 0;
+                %tmp.26 = sub %tmp.24 %tmp.25;
+                %tmp.27 = 280;
+                %tmp.28 = 0;
+                %tmp.29 = sub %tmp.27 %tmp.28;
+                invoke %tmp.16 %tmp.17(%tmp.20, %tmp.23, %tmp.26, %tmp.29);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 26 16 ]
+                %tmp.30 = lgetv %dc;
+                %tmp.31 = getv function %tmp.30 :setColor;
+                %tmp.32 = getm $.Toybox.Graphics;
+                %tmp.33 = getv %tmp.32 :COLOR_TRANSPARENT;
+                %tmp.34 = getm $.Toybox.Graphics;
+                %tmp.35 = getv %tmp.34 :COLOR_WHITE;
+                invoke %tmp.30 %tmp.31(%tmp.33, %tmp.35);
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_17_53_stop:
+            }
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 31; @position = 27; initialized = true; ]
+        var dancers as Symbol;
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 34; ]
+    module Fonts {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 34; ]
+        <init> {
+        }
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 37; ]
+    module JsonData {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 37; ]
+        <init> {
+        }
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 40; ]
+    module Layouts {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 40; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 41; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_41_73_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 42 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_41_73_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_41_73_stop" ]
+            %rez_cmp_local_custom_drawable_background.1 = local;
+            %tmp.4 = getm $;
+            %tmp.5 = getv %tmp.4 :Rez;
+            %tmp.6 = getv %tmp.5 :Drawables;
+            %tmp.7 = getv function ? %tmp.6 :background;
+            %tmp.1 = newc %tmp.7 ();
+            lputv %rez_cmp_local_custom_drawable_background.1 %tmp.1;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 43 12 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_43_12_if_stmt:
+            %tmp.8 = lgetv %rez_cmp_local_custom_drawable_background.1;
+            %tmp.9 = getv %tmp.8 :identifier;
+            %tmp.10 = null;
+            %tmp.11 = eq %tmp.9 %tmp.10;
+            bf %tmp.11 @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_43_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_43_12_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_43_77_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 44 16 ]
+            %tmp.12 = lgetv %rez_cmp_local_custom_drawable_background.1;
+            %tmp.13 = "background";
+            putv %tmp.12 :identifier %tmp.13;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_43_77_stop:
+            goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_43_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_43_12_if_end:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 47 12 ]
+            [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_41_73_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_41_73_stop" ]
+            %rez_cmp_local_text_TimeLabel.2 = local;
+            %tmp.16 = getm $.Toybox.WatchUi;
+            %tmp.17 = getv function ? %tmp.16 :Text;
+            %tmp.18 = newd 6;
+            %tmp.20 = const :identifier;
+            %tmp.21 = "TimeLabel";
+            %tmp.22 = dup %tmp.18;
+            %tmp.23 = aputv %tmp.22 %tmp.20 %tmp.21;
+            %tmp.25 = const :color;
+            %tmp.26 = getm $.Toybox.Graphics;
+            %tmp.27 = getv %tmp.26 :COLOR_BLUE;
+            %tmp.28 = dup %tmp.23;
+            %tmp.29 = aputv %tmp.28 %tmp.25 %tmp.27;
+            %tmp.31 = const :locX;
+            %tmp.32 = 280;
+            %tmp.33 = 0.5;
+            %tmp.34 = mul %tmp.32 %tmp.33;
+            %tmp.35 = dup %tmp.29;
+            %tmp.36 = aputv %tmp.35 %tmp.31 %tmp.34;
+            %tmp.38 = const :locY;
+            %tmp.39 = 280;
+            %tmp.40 = lgetv %dc;
+            %tmp.41 = getv function %tmp.40 :getFontHeight;
+            %tmp.42 = getm $.Toybox.Graphics;
+            %tmp.43 = getv %tmp.42 :FONT_NUMBER_THAI_HOT;
+            %tmp.44 = invoke %tmp.40 %tmp.41(%tmp.43);
+            %tmp.45 = sub %tmp.39 %tmp.44;
+            %tmp.46 = 0.5;
+            %tmp.47 = mul %tmp.45 %tmp.46;
+            %tmp.48 = dup %tmp.36;
+            %tmp.49 = aputv %tmp.48 %tmp.38 %tmp.47;
+            %tmp.51 = const :justification;
+            %tmp.52 = getm $.Toybox.Graphics;
+            %tmp.53 = getv %tmp.52 :TEXT_JUSTIFY_CENTER;
+            %tmp.54 = dup %tmp.49;
+            %tmp.55 = aputv %tmp.54 %tmp.51 %tmp.53;
+            %tmp.57 = const :font;
+            %tmp.58 = getm $.Toybox.Graphics;
+            %tmp.59 = getv %tmp.58 :FONT_NUMBER_THAI_HOT;
+            %tmp.60 = dup %tmp.55;
+            %tmp.61 = aputv %tmp.60 %tmp.57 %tmp.59;
+            %tmp.14 = newc %tmp.17 (%tmp.61);
+            lputv %rez_cmp_local_text_TimeLabel.2 %tmp.14;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 49 12 ]
+            %tmp.62 = newa Array<WatchUi.Drawable> 2;
+            %tmp.64 = lgetv %rez_cmp_local_custom_drawable_background.1;
+            %tmp.65 = dup %tmp.62;
+            %tmp.66 = aputv %tmp.65 0 %tmp.64;
+            %tmp.68 = lgetv %rez_cmp_local_text_TimeLabel.2;
+            %tmp.69 = dup %tmp.66;
+            %tmp.70 = aputv %tmp.69 1 %tmp.68;
+            ret %tmp.70;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_bin_gen_006_B3291_00_source_Rez_mcgen_41_73_stop:
+        }
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 53; ]
+    module Menus {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 53; ]
+        <init> {
+        }
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 56; ]
+    module Strings {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 56; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 57; @position = 27; initialized = true; ]
+        var StepGoal as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 58; @position = 27; initialized = true; ]
+        var FloorsClimbedGoal as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 59; @position = 27; initialized = true; ]
+        var GenericGoal as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 60; @position = 27; initialized = true; ]
+        var ActiveMinutesGoal as Symbol;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 61; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 64; ]
+    module Styles {
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 64; ]
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 65; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 65; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 66; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 69; ]
+        module system_size__menu_header {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 69; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 70; @position = 18; ]
+            const width as Number = 280;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 71; @position = 18; ]
+            const height as Number = 87;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 74; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 75; @position = 18; ]
+            const x as Number = 11;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 76; @position = 18; ]
+            const y as Number = 185;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 79; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 79; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 80; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 83; ]
+        module prompt_loc__body_no_title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 83; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 84; @position = 18; ]
+            const x as Number = 28;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 85; @position = 18; ]
+            const y as Number = 28;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 88; ]
+        module system_icon_dark__about {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 88; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 89; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__about.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 90; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 91; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 92; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 95; ]
+        module system_icon_light__question {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 95; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 96; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__question.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 97; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 100; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 100; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 101; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 104; ]
+        module prompt_font__title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 104; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 105 18 ]
+                %tmp.71 = getm $.Toybox.Graphics;
+                %tmp.72 = getv %tmp.71 :TEXT_JUSTIFY_CENTER;
+                %tmp.73 = getm $.Toybox.Graphics;
+                %tmp.74 = getv %tmp.73 :TEXT_JUSTIFY_VCENTER;
+                %tmp.75 = bitor %tmp.72 %tmp.74;
+                putv self :justification %tmp.75;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 106 18 ]
+                %tmp.76 = getm $.Toybox.Graphics;
+                %tmp.77 = getv %tmp.76 :FONT_XTINY;
+                putv self :font %tmp.77;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 105; @position = 18; ]
+            const justification;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 106; @position = 18; ]
+            const font;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 109; ]
+        module system_icon_dark__discard {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 109; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 110; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__discard.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 111; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 112; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 113; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 116; ]
+        module system_size__menu_item {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 116; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 117; @position = 18; ]
+            const width as Number = 280;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 118; @position = 18; ]
+            const height as Number = 73;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 121; ]
+        module system_color_dark__text {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 121; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 123 18 ]
+                %tmp.78 = getm $.Toybox.Graphics;
+                %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
+                putv self :background %tmp.79;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 122; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 123; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 126; ]
+        module system_icon_destructive__discard {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 126; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 127; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__discard.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 128; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 131; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 131; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 132; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 133; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 136; ]
+        module prompt_size__title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 136; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 137; @position = 18; ]
+            const width as Number = 224;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 138; @position = 18; ]
+            const height as Number = 42;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 141; ]
+        module confirmation_font__body {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 141; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 142 18 ]
+                %tmp.80 = getm $.Toybox.Graphics;
+                %tmp.81 = getv %tmp.80 :TEXT_JUSTIFY_CENTER;
+                %tmp.82 = getm $.Toybox.Graphics;
+                %tmp.83 = getv %tmp.82 :TEXT_JUSTIFY_VCENTER;
+                %tmp.84 = bitor %tmp.81 %tmp.83;
+                putv self :justification %tmp.84;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 143 18 ]
+                %tmp.85 = getm $.Toybox.Graphics;
+                %tmp.86 = getv %tmp.85 :FONT_TINY;
+                putv self :font %tmp.86;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 142; @position = 18; ]
+            const justification;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 143; @position = 18; ]
+            const font;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 146; ]
+        module system_color_dark__background {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 147; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 148; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 151; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 151; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 152; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 155; ]
+        module system_size__launch_icon {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 155; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 156; @position = 18; ]
+            const scaleX as Number = 40;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 157; @position = 18; ]
+            const scaleY as Number = 40;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 158; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 161; ]
+        module confirmation_input__confirm {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 161; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 162 18 ]
+                %tmp.87 = getm $.Toybox.WatchUi;
+                %tmp.88 = getv %tmp.87 :KEY_ENTER;
+                putv self :button %tmp.88;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 162; @position = 18; ]
+            const button;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 165; ]
+        module prompt_font__body_with_title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 165; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 166 18 ]
+                %tmp.89 = getm $.Toybox.Graphics;
+                %tmp.90 = getv %tmp.89 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.90;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 167 18 ]
+                %tmp.91 = getm $.Toybox.Graphics;
+                %tmp.92 = getv %tmp.91 :FONT_TINY;
+                putv self :font %tmp.92;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 166; @position = 18; ]
+            const justification;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 167; @position = 18; ]
+            const font;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 170; ]
+        module confirmation_loc__body {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 170; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 171; @position = 18; ]
+            const x as Number = 56;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 172; @position = 18; ]
+            const y as Number = 56;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 175; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 175; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 176; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 179; ]
+        module prompt_color_dark__background {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 179; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 180; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 181; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 184; ]
+        module system_loc__hint_action_menu {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 184; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 185; @position = 18; ]
+            const x as Number = 242;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 186; @position = 18; ]
+            const y as Number = 52;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 189; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 189; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 190; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_completion.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 191; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 194; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 194; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 195; @position = 18; ]
+            const x as Number = 3;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 196; @position = 18; ]
+            const y as Number = 116;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 199; ]
+        module prompt_size__body_no_title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 199; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 200; @position = 18; ]
+            const width as Number = 224;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 201; @position = 18; ]
+            const height as Number = 224;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 204; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 204; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 205; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_left_top.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 206; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 209; ]
+        module prompt_color_light__background {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 209; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 210; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 211; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 214; ]
+        module confirmation_input__delete {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 214; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 215 18 ]
+                %tmp.93 = getm $.Toybox.WatchUi;
+                %tmp.94 = getv %tmp.93 :KEY_ENTER;
+                putv self :button %tmp.94;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 215; @position = 18; ]
+            const button;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 218; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 218; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 219; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_left_top.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 220; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 223; ]
+        module system_input__action_menu {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 223; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 224 18 ]
+                %tmp.95 = getm $.Toybox.WatchUi;
+                %tmp.96 = getv %tmp.95 :KEY_ENTER;
+                putv self :button %tmp.96;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 224; @position = 18; ]
+            const button;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 227; ]
+        module system_icon_light__save {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 227; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 228; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__save.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 229; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 232; ]
+        module prompt_color_light__body {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 232; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 234 18 ]
+                %tmp.97 = getm $.Toybox.Graphics;
+                %tmp.98 = getv %tmp.97 :COLOR_TRANSPARENT;
+                putv self :background %tmp.98;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 233; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 234; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 237; ]
+        module system_loc__subwindow {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 237; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 238; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 241; ]
+        module system_icon_light__warning {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 241; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 242; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__warning.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 243; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 246; ]
+        module confirmation_color_light__body {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 246; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 248 18 ]
+                %tmp.99 = getm $.Toybox.Graphics;
+                %tmp.100 = getv %tmp.99 :COLOR_TRANSPARENT;
+                putv self :background %tmp.100;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 247; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 248; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 251; ]
+        module activity_color_light__background {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 251; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 252; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 253; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 256; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 256; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 257; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 260; ]
+        module system_size__screen {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 260; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 261; @position = 18; ]
+            const width as Number = 280;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 262; @position = 18; ]
+            const height as Number = 280;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 265; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 265; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 266; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 269; ]
+        module system_color_light__background {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 269; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 270; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 271; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 274; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 274; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 275; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 278; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 278; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 279; @position = 18; ]
+            const x as Number = 226;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 280; @position = 18; ]
+            const y as Number = 52;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 283; ]
+        module activity_color_dark__text {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 283; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 285 18 ]
+                %tmp.101 = getm $.Toybox.Graphics;
+                %tmp.102 = getv %tmp.101 :COLOR_TRANSPARENT;
+                putv self :background %tmp.102;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 284; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 285; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 288; ]
+        module confirmation_input__keep {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 288; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 289 18 ]
+                %tmp.103 = getm $.Toybox.WatchUi;
+                %tmp.104 = getv %tmp.103 :KEY_DOWN;
+                putv self :button %tmp.104;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 289; @position = 18; ]
+            const button;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 292; ]
+        module prompt_loc__body_with_title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 292; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 293; @position = 18; ]
+            const x as Number = 28;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 294; @position = 18; ]
+            const y as Number = 84;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 297; ]
+        module system_icon_dark__search {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 297; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 298; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__search.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 299; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 300; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 301; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 304; ]
+        module activity_color_light__text {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 304; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 306 18 ]
+                %tmp.105 = getm $.Toybox.Graphics;
+                %tmp.106 = getv %tmp.105 :COLOR_TRANSPARENT;
+                putv self :background %tmp.106;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 305; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 306; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 309; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 309; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 310; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_keep.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 311; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 314; ]
+        module system_icon_dark__save {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 314; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 315; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__save.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 316; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 317; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 318; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 321; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 321; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 322; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 325; ]
+        module system_icon_light__search {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 325; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 326; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__search.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 327; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 330; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 330; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 331; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 332; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 335; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 335; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 336; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 339; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 339; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 340; @position = 18; ]
+            const x as Number = 242;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 341; @position = 18; ]
+            const y as Number = 185;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 344; ]
+        module confirmation_color_dark__body {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 344; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 346 18 ]
+                %tmp.107 = getm $.Toybox.Graphics;
+                %tmp.108 = getv %tmp.107 :COLOR_TRANSPARENT;
+                putv self :background %tmp.108;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 345; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 346; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 349; ]
+        module prompt_color_dark__title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 349; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 351 18 ]
+                %tmp.109 = getm $.Toybox.Graphics;
+                %tmp.110 = getv %tmp.109 :COLOR_TRANSPARENT;
+                putv self :background %tmp.110;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 350; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 351; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 354; ]
+        module system_icon_destructive__cancel {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 354; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 355; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__cancel.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 356; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 359; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 359; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 360; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 361; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 364; ]
+        module prompt_loc__title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 364; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 365; @position = 18; ]
+            const x as Number = 28;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 366; @position = 18; ]
+            const y as Number = 21;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 369; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 369; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 370; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 373; ]
+        module prompt_color_light__title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 373; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 375 18 ]
+                %tmp.111 = getm $.Toybox.Graphics;
+                %tmp.112 = getv %tmp.111 :COLOR_TRANSPARENT;
+                putv self :background %tmp.112;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 374; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 375; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 378; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 378; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 379; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 380; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 383; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 383; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 384; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 385; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 388; ]
+        module system_icon_light__cancel {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 388; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 389; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__cancel.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 390; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 393; ]
+        module system_icon_light__about {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 393; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 394; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__about.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 395; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 398; ]
+        module system_size__toast_icon {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 398; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 399; @position = 18; ]
+            const scaleX as Number = 40;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 400; @position = 18; ]
+            const scaleY as Number = 40;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 401; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 404; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 404; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 405; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 408; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 408; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 409; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_reject.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 410; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 413; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 413; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 414; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 415; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 418; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 418; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 419; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 422; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 422; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 423; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 426; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 426; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 427; @position = 18; ]
+            const x as Number = 11;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 428; @position = 18; ]
+            const y as Number = 185;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 429; @position = 18; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 432; ]
+        module activity_color_dark__background {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 432; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 433; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 434; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 437; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 437; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 438; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_left_bottom.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 439; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 442; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 442; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 443; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 446; ]
+        module system_size__menu_icon {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 446; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 447; @position = 18; ]
+            const scaleX as Number = 40;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 448; @position = 18; ]
+            const scaleY as Number = 40;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 449; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 452; ]
+        module system_icon_destructive__warning {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 452; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 453; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__warning.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 454; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 457; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 457; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 458; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 461; ]
+        module system_icon_dark__cancel {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 461; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 462; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__cancel.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 463; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 464; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 465; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 468; ]
+        module prompt_size__body_with_title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 468; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 469; @position = 18; ]
+            const width as Number = 224;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 470; @position = 18; ]
+            const height as Number = 168;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 473; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 473; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 474; @position = 18; ]
+            const x as Number = 242;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 475; @position = 18; ]
+            const y as Number = 52;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 478; ]
+        module system_color_light__text {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 478; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 480 18 ]
+                %tmp.113 = getm $.Toybox.Graphics;
+                %tmp.114 = getv %tmp.113 :COLOR_TRANSPARENT;
+                putv self :background %tmp.114;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 479; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 480; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 483; ]
+        module system_icon_light__check {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 483; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 484; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__check.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 485; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 488; ]
+        module confirmation_input__reject {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 488; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 489 18 ]
+                %tmp.115 = getm $.Toybox.WatchUi;
+                %tmp.116 = getv %tmp.115 :KEY_DOWN;
+                putv self :button %tmp.116;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 489; @position = 18; ]
+            const button;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 492; ]
+        module system_icon_light__revert {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 492; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 493; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__revert.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 494; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 497; ]
+        module system_size__subwindow {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 497; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 498; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 501; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 501; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 502; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 505; ]
+        module system_icon_dark__check {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 505; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 506; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__check.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 507; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 508; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 509; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 512; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 512; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 513; @position = 18; ]
+            const x as Number = 11;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 514; @position = 18; ]
+            const y as Number = 185;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 515; @position = 18; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 518; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 518; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 519; @position = 18; ]
+            const x as Number = 226;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 520; @position = 18; ]
+            const y as Number = 52;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 523; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 523; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 524; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 527; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 527; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 528; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_left_middle.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 529; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 532; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 532; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 533; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 534; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 537; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 537; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 538; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 541; ]
+        module system_icon_dark__revert {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 541; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 542; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__revert.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 543; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 544; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 545; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 548; ]
+        module system_icon_dark__question {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 548; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 549; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__question.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 550; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 551; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 552; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 555; ]
+        module system_icon_light__discard {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 555; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 556; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__discard.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 557; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 560; ]
+        module device_info {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 560; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 562 18 ]
+                %tmp.117 = getm $.Toybox.System;
+                %tmp.118 = getv %tmp.117 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.118;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 561; @position = 18; ]
+            const screenWidth as Number = 280;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 562; @position = 18; ]
+            const screenShape;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 563; @position = 18; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 564; @position = 18; ]
+            const screenHeight as Number = 280;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 565; @position = 18; ]
+            const hasTouchScreen as Boolean = false;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 566; @position = 18; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 569; ]
+        module prompt_font__body_no_title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 569; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 570 18 ]
+                %tmp.119 = getm $.Toybox.Graphics;
+                %tmp.120 = getv %tmp.119 :TEXT_JUSTIFY_CENTER;
+                %tmp.121 = getm $.Toybox.Graphics;
+                %tmp.122 = getv %tmp.121 :TEXT_JUSTIFY_VCENTER;
+                %tmp.123 = bitor %tmp.120 %tmp.122;
+                putv self :justification %tmp.123;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 571 18 ]
+                %tmp.124 = getm $.Toybox.Graphics;
+                %tmp.125 = getv %tmp.124 :FONT_TINY;
+                putv self :font %tmp.125;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 570; @position = 18; ]
+            const justification;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 571; @position = 18; ]
+            const font;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 574; ]
+        module prompt_size__title_icon {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 574; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 575; @position = 18; ]
+            const scaleX as Float = 0.15;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 576; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 579; ]
+        module system_icon_dark__warning {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 579; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 580; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__warning.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 581; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 582; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 583; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 586; ]
+        module prompt_loc__title_icon {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 586; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 587; @position = 18; ]
+            const x as Number = 140;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 588; @position = 18; ]
+            const y as Number = 42;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 589; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 590; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 593; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 593; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 594; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 597; ]
+        module prompt_color_dark__body {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 597; ]
+            <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen" 599 18 ]
+                %tmp.126 = getm $.Toybox.Graphics;
+                %tmp.127 = getv %tmp.126 :COLOR_TRANSPARENT;
+                putv self :background %tmp.127;
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 598; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 599; @position = 18; ]
+            const background;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 602; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 602; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 603; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_delete.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 604; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 607; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 607; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 608; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 609; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 612; ]
+        module confirmation_size__body {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 612; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 613; @position = 18; ]
+            const width as Number = 168;
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 614; @position = 18; ]
+            const height as Number = 168;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 617; ]
+        module system_icon_positive__check {
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 617; ]
+            <init> {
+            }
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 618; @position = 18; ]
+            const filename as String = "C:\\Users\\vadym\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_positive__check.svg";
+            [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 619; @position = 18; ]
+            const dithering as String = "none";
+        }
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

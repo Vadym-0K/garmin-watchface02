@@ -1,0 +1,253 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 1; ]
+using Toybox.WatchUi;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 2; ]
+using Toybox.Graphics;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 3; ]
+using Toybox.System;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 4; ]
+using Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 6; ]
+class DanceDanceGarminView extends WatchUi.WatchFace{
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 7; @position = 16; ]
+    private
+    var _animationDelegate;
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 10; ]
+    function initialize() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_10_26_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 11 8 ]
+        %tmp.2 = getv ? :WatchFace;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 12 8 ]
+        %tmp.7 = getv ? :DanceDanceAnimationController;
+        %tmp.4 = newc %tmp.7 ();
+        putv self :_animationDelegate %tmp.4;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_10_26_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 16; ]
+    function onLayout(dc) {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 22; ]
+    function onShow() {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_22_22_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 23 8 ]
+        %tmp.2 = getv ? :_animationDelegate;
+        %tmp.3 = getv function %tmp.2 :handleOnShow;
+        %tmp.5 = lgetv %self;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 24 8 ]
+        %tmp.7 = getv ? :_animationDelegate;
+        %tmp.8 = getv function %tmp.7 :play;
+        invoke %tmp.7 %tmp.8();
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_22_22_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 30; ]
+    function onHide() {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_30_22_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 31 8 ]
+        %tmp.2 = getv ? :_animationDelegate;
+        %tmp.3 = getv function %tmp.2 :handleOnHide;
+        %tmp.5 = lgetv %self;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_30_22_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 35; ]
+    private
+    function getTimeString() {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_35_37_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 36 8 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_35_37_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_35_37_stop" ]
+        %clockTime.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clockTime.1 %tmp.3;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 37 8 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_35_37_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_35_37_stop" ]
+        %info.2 = local;
+        %tmp.4 = getm $.Toybox.System;
+        %tmp.5 = getv function %tmp.4 :getDeviceSettings;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %info.2 %tmp.6;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 39 8 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_35_37_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_35_37_stop" ]
+        %hour.3 = local;
+        %tmp.7 = lgetv %clockTime.1;
+        %tmp.8 = getv %tmp.7 :hour;
+        lputv %hour.3 %tmp.8;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 41 8 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_41_8_if_stmt:
+        %tmp.9 = lgetv %info.2;
+        %tmp.10 = getv %tmp.9 :is24Hour;
+        %tmp.11 = not %tmp.10;
+        bf %tmp.11 @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_41_8_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_41_8_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_41_29_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 42 12 ]
+        %tmp.12 = lgetv %clockTime.1;
+        %tmp.13 = getv %tmp.12 :hour;
+        %tmp.14 = 12;
+        %tmp.15 = mod %tmp.13 %tmp.14;
+        lputv %hour.3 %tmp.15;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 43 12 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_43_12_if_stmt:
+        %tmp.17 = lgetv %hour.3;
+        %tmp.18 = 0;
+        %tmp.19 = eq %tmp.17 %tmp.18;
+        bf %tmp.19 @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_43_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_43_12_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_43_27_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 44 16 ]
+        %tmp.20 = 12;
+        lputv %hour.3 %tmp.20;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_43_27_stop:
+        goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_43_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_43_12_if_end:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_41_29_stop:
+        goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_41_8_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_41_8_if_end:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 48 8 ]
+        %tmp.21 = getm $.Toybox.Lang;
+        %tmp.22 = getv function %tmp.21 :format;
+        %tmp.23 = "$1$:$2$";
+        %tmp.24 = newa 2;
+        %tmp.26 = lgetv %hour.3;
+        %tmp.27 = dup %tmp.24;
+        %tmp.28 = aputv %tmp.27 0 %tmp.26;
+        %tmp.29 = lgetv %clockTime.1;
+        %tmp.30 = getv %tmp.29 :min;
+        %tmp.31 = getv function %tmp.30 :format;
+        %tmp.32 = "%02d";
+        %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
+        %tmp.34 = dup %tmp.28;
+        %tmp.35 = aputv %tmp.34 1 %tmp.33;
+        %tmp.36 = invoke %tmp.21 %tmp.22(%tmp.23, %tmp.35);
+        ret %tmp.36;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_35_37_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 53; ]
+    private
+    function updateTimeLayer() {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 54 8 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_stop" ]
+        %dc.1 = local;
+        %tmp.2 = getv ? :_animationDelegate;
+        %tmp.3 = getv function %tmp.2 :getTextLayer;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = getv function %tmp.4 :getDc;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %dc.1 %tmp.6;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 55 8 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_stop" ]
+        %width.2 = local;
+        %tmp.7 = lgetv %dc.1;
+        %tmp.8 = getv function %tmp.7 :getWidth;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        lputv %width.2 %tmp.9;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 56 8 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_stop" ]
+        %height.3 = local;
+        %tmp.10 = lgetv %dc.1;
+        %tmp.11 = getv function %tmp.10 :getHeight;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %height.3 %tmp.12;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 59 8 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_stop" ]
+        %timeString.4 = local;
+        %tmp.13 = self;
+        %tmp.14 = getv function %tmp.13 :getTimeString;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %timeString.4 %tmp.15;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 60 8 ]
+        %tmp.16 = lgetv %dc.1;
+        %tmp.17 = getv function %tmp.16 :setColor;
+        %tmp.18 = getm $.Toybox.Graphics;
+        %tmp.19 = getv %tmp.18 :COLOR_TRANSPARENT;
+        %tmp.20 = getm $.Toybox.Graphics;
+        %tmp.21 = getv %tmp.20 :COLOR_TRANSPARENT;
+        invoke %tmp.16 %tmp.17(%tmp.19, %tmp.21);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 61 8 ]
+        %tmp.22 = lgetv %dc.1;
+        %tmp.23 = getv function %tmp.22 :clear;
+        invoke %tmp.22 %tmp.23();
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 63 8 ]
+        %tmp.24 = lgetv %dc.1;
+        %tmp.25 = getv function %tmp.24 :setColor;
+        %tmp.26 = getm $.Toybox.Graphics;
+        %tmp.27 = getv %tmp.26 :COLOR_BLUE;
+        %tmp.28 = getm $.Toybox.Graphics;
+        %tmp.29 = getv %tmp.28 :COLOR_TRANSPARENT;
+        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.29);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 64 8 ]
+        %tmp.30 = lgetv %dc.1;
+        %tmp.31 = getv function %tmp.30 :drawText;
+        %tmp.33 = lgetv %width.2;
+        %tmp.34 = 2;
+        %tmp.35 = div %tmp.33 %tmp.34;
+        %tmp.37 = lgetv %height.3;
+        %tmp.38 = 2;
+        %tmp.39 = div %tmp.37 %tmp.38;
+        %tmp.40 = getm $.Toybox.Graphics;
+        %tmp.41 = getv %tmp.40 :FONT_NUMBER_MEDIUM;
+        %tmp.43 = lgetv %timeString.4;
+        %tmp.44 = getm $.Toybox.Graphics;
+        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_CENTER;
+        %tmp.46 = getm $.Toybox.Graphics;
+        %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_VCENTER;
+        %tmp.48 = bitor %tmp.45 %tmp.47;
+        invoke %tmp.30 %tmp.31(%tmp.35, %tmp.39, %tmp.41, %tmp.43, %tmp.48);
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_53_39_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 70; ]
+    function onUpdate(dc) {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_70_26_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 72 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_WHITE;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 73 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 75 8 ]
+        %tmp.9 = self;
+        %tmp.10 = getv function %tmp.9 :updateTimeLayer;
+        invoke %tmp.9 %tmp.10();
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 76 8 ]
+        ret ?;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_70_26_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 81; ]
+    function onExitSleep() {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_81_27_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 82 9 ]
+        %tmp.2 = getv ? :_animationDelegate;
+        %tmp.3 = getv function %tmp.2 :play;
+        invoke %tmp.2 %tmp.3();
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_81_27_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 86; ]
+    function onEnterSleep() {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_86_28_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc" 87 9 ]
+        %tmp.2 = getv ? :_animationDelegate;
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+D_project_time_watchface00_connectiq_apps_master_watchfaces_DanceDanceGarmin_source_DanceDanceGarminView_mc_86_28_stop:
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\DanceDanceGarmin\source\DanceDanceGarminView.mc"; @line = 1; ]
+<init> {
+}

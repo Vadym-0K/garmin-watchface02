@@ -1,0 +1,61 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 6; ]
+import Toybox.Application;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 7; ]
+import Toybox.WatchUi;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 8; ]
+import Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 11; ]
+class TypedFaceApp extends Application.AppBase{
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 11; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 11; ]
+    static
+    <init> {
+    }
+    //! Constructor
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 14; ]
+    function initialize() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_TypedFaceApp_mc_14_26_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc" 15 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_TypedFaceApp_mc_14_26_stop:
+    }
+    //! onStart() is called on application start up
+    //! @param state Start parameters
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 20; ]
+    function onStart(state as Dictionary or Null) {
+    }
+    //! onStop() is called when your application is exiting
+    //! @param state Stop parameters
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 25; ]
+    function onStop(state as Dictionary or Null) {
+    }
+    //! Return the initial view of your application here
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 29; ]
+    function getInitialView() {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_TypedFaceApp_mc_29_30_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc" 30 8 ]
+        %tmp.1 = newa 1;
+        %tmp.5 = getv ? :TypedFaceView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_TypedFaceApp_mc_29_30_stop:
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 34; ]
+    function onSettingsChanged() as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_TypedFaceApp_mc_34_41_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc" 35 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :requestUpdate;
+        invoke %tmp.1 %tmp.2();
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_TypedFaceApp_mc_34_41_stop:
+    }
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\TypedFaceApp.mc"; @line = 6; ]
+<init> {
+}

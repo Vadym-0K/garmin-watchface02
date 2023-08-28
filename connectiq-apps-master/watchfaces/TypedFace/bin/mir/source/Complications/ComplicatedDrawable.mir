@@ -1,0 +1,378 @@
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 6; ]
+import Toybox.Lang;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 7; ]
+import Toybox.Graphics;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 8; ]
+import Toybox.WatchUi;
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 10; ]
+module Complicated {
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 10; ]
+    <init> {
+    }
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 13; ]
+    class ComplicationDrawable extends WatchUi.Drawable{
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 13; ]
+        <init> {
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 14 20 ]
+            %tmp.2 = getv ? :Application;
+            %tmp.3 = getv function %tmp.2 :loadResource;
+            %tmp.5 = getv ? :Rez;
+            %tmp.6 = getv %tmp.5 :Drawables;
+            %tmp.7 = getv %tmp.6 :complication;
+            %tmp.8 = invoke %tmp.2 %tmp.3(%tmp.7);
+            putv self :_background %tmp.8;
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 13; ]
+        static
+        <init> {
+        }
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 14; @position = 20; ]
+        private
+        var _background as BitmapType;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 15; @position = 20; ]
+        private
+        var _updater as ModelUpdater or Null;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 16; @position = 20; ]
+        private
+        var _radius as Number;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 17; @position = 20; ]
+        private
+        var _centerX as Number;
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 18; @position = 20; ]
+        private
+        var _centerY as Number;
+        //! Constructor
+        //! @param params Drawable arguments
+        [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 23; ]
+        public
+    function initialize(params as {:identifier as Object, :locX as Numeric, :locY as Numeric, :width as Numeric, :height as Numeric}) as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_23_147_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 26 12 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_23_147_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_23_147_stop" ]
+        %backgroundWidth.1 = local;
+        %tmp.2 = getv ? :_background;
+        %tmp.3 = getv function %tmp.2 :getWidth;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %backgroundWidth.1 %tmp.4;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 27 12 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_23_147_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_23_147_stop" ]
+        %backgroundHeight.2 = local;
+        %tmp.6 = getv ? :_background;
+        %tmp.7 = getv function %tmp.6 :getHeight;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        lputv %backgroundHeight.2 %tmp.8;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 29 12 ]
+        %tmp.10 = lgetv %params;
+        %tmp.12 = const :locX;
+        %tmp.13 = agetv %tmp.10 %tmp.12;
+        putv self :_centerX %tmp.13;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 30 12 ]
+        %tmp.15 = lgetv %params;
+        %tmp.17 = const :locY;
+        %tmp.18 = agetv %tmp.15 %tmp.17;
+        putv self :_centerY %tmp.18;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 31 12 ]
+        %tmp.20 = lgetv %backgroundHeight.2;
+        %tmp.21 = 2;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        putv self :_radius %tmp.22;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 33 12 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_23_147_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_23_147_stop" ]
+        %options.3 = local;
+        %tmp.23 = newd 3;
+        %tmp.25 = const :locX;
+        %tmp.27 = lgetv %params;
+        %tmp.29 = const :locX;
+        %tmp.30 = agetv %tmp.27 %tmp.29;
+        %tmp.32 = lgetv %backgroundWidth.1;
+        %tmp.33 = 2;
+        %tmp.34 = div %tmp.32 %tmp.33;
+        %tmp.35 = sub %tmp.30 %tmp.34;
+        %tmp.36 = dup %tmp.23;
+        %tmp.37 = aputv %tmp.36 %tmp.25 %tmp.35;
+        %tmp.39 = const :locY;
+        %tmp.41 = lgetv %params;
+        %tmp.43 = const :locY;
+        %tmp.44 = agetv %tmp.41 %tmp.43;
+        %tmp.46 = lgetv %backgroundHeight.2;
+        %tmp.47 = 2;
+        %tmp.48 = div %tmp.46 %tmp.47;
+        %tmp.49 = sub %tmp.44 %tmp.48;
+        %tmp.50 = dup %tmp.37;
+        %tmp.51 = aputv %tmp.50 %tmp.39 %tmp.49;
+        %tmp.53 = const :identifier;
+        %tmp.55 = lgetv %params;
+        %tmp.57 = const :identifier;
+        %tmp.58 = agetv %tmp.55 %tmp.57;
+        %tmp.59 = dup %tmp.51;
+        %tmp.60 = aputv %tmp.59 %tmp.53 %tmp.58;
+        lputv %options.3 %tmp.60;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 40 12 ]
+        %tmp.62 = getv ? :Drawable;
+        %tmp.63 = getv function %tmp.62 :initialize;
+        %tmp.65 = lgetv %options.3;
+        invoke %tmp.62 %tmp.63(%tmp.65);
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_23_147_stop:
+    }
+    //! Set the model updater for the complication
+    //! @param updater Model updater for the complication or null to disable
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 45; ]
+    public
+    function setModelUpdater(updater as ModelUpdater or Null) as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_45_74_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 46 12 ]
+        %tmp.2 = lgetv %updater;
+        putv self :_updater %tmp.2;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_45_74_stop:
+    }
+    //! Draw the complication
+    //! @param dc Draw context
+    [ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 51; ]
+    public
+    function draw(dc as Dc) as Void {
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_51_47_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 52 12 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_12_if_stmt:
+        %tmp.2 = getv ? :_updater;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_12_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 53 16 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_stop" ]
+        %foregroundColor.1 = local;
+        %tmp.6 = getv ? :Application;
+        %tmp.7 = getv function %tmp.6 :getApp;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = getv function %tmp.8 :getProperty;
+        %tmp.10 = "ForegroundColor";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        lputv %foregroundColor.1 %tmp.11;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 54 16 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_stop" ]
+        %model.2 = local;
+        %tmp.13 = getv ? :_updater;
+        %tmp.14 = getv function %tmp.13 :updateModel;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %model.2 %tmp.15;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 55 16 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_stop" ]
+        %icon.3 = local;
+        %tmp.16 = lgetv %model.2;
+        %tmp.17 = getv %tmp.16 :icon;
+        lputv %icon.3 %tmp.17;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 56 16 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_stop" ]
+        %iconWidth.4 = local;
+        %tmp.18 = lgetv %icon.3;
+        %tmp.19 = getv function %tmp.18 :getWidth;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        lputv %iconWidth.4 %tmp.20;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 57 16 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_stop" ]
+        %iconHeight.5 = local;
+        %tmp.21 = lgetv %icon.3;
+        %tmp.22 = getv function %tmp.21 :getHeight;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        lputv %iconHeight.5 %tmp.23;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 60 16 ]
+        %tmp.24 = lgetv %dc;
+        %tmp.25 = getv function %tmp.24 :drawBitmap;
+        %tmp.27 = getv ? :locX;
+        %tmp.29 = getv ? :locY;
+        %tmp.31 = getv ? :_background;
+        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.29, %tmp.31);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 62 16 ]
+        %tmp.32 = lgetv %dc;
+        %tmp.33 = getv function %tmp.32 :drawBitmap;
+        %tmp.35 = getv ? :_centerX;
+        %tmp.37 = lgetv %iconWidth.4;
+        %tmp.38 = 2;
+        %tmp.39 = div %tmp.37 %tmp.38;
+        %tmp.40 = sub %tmp.35 %tmp.39;
+        %tmp.42 = getv ? :_centerY;
+        %tmp.44 = lgetv %iconHeight.5;
+        %tmp.45 = 2;
+        %tmp.46 = div %tmp.44 %tmp.45;
+        %tmp.47 = sub %tmp.42 %tmp.46;
+        %tmp.49 = lgetv %icon.3;
+        invoke %tmp.32 %tmp.33(%tmp.40, %tmp.47, %tmp.49);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 64 16 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_16_if_stmt:
+        %tmp.51 = lgetv %model.2;
+        %tmp.53 = getv ? :PercentModel;
+        %tmp.54 = isa %tmp.51 %tmp.53;
+        bf %tmp.54 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_16_if_false;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_16_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_51_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 66 20 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_51_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_51_stop" ]
+        %percent.6 = local;
+        %tmp.56 = lgetv %model.2;
+        %tmp.57 = as %tmp.56 { (PercentModel) };
+        %tmp.58 = as %tmp.57 PercentModel;
+        %tmp.59 = getv %tmp.58 :percent;
+        lputv %percent.6 %tmp.59;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 68 20 ]
+        %tmp.60 = lgetv %dc;
+        %tmp.61 = getv function %tmp.60 :setColor;
+        %tmp.63 = lgetv %foregroundColor.1;
+        %tmp.64 = getm $.Toybox.Graphics;
+        %tmp.65 = getv %tmp.64 :COLOR_TRANSPARENT;
+        invoke %tmp.60 %tmp.61(%tmp.63, %tmp.65);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 69 20 ]
+        %tmp.66 = lgetv %dc;
+        %tmp.67 = getv function %tmp.66 :setPenWidth;
+        %tmp.68 = 2;
+        invoke %tmp.66 %tmp.67(%tmp.68);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 72 20 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_72_20_if_stmt:
+        %tmp.70 = lgetv %percent.6;
+        %tmp.71 = 25;
+        %tmp.72 = lte %tmp.70 %tmp.71;
+        bf %tmp.72 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_72_20_if_false;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_72_20_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_72_38_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 73 24 ]
+        %tmp.73 = lgetv %dc;
+        %tmp.74 = getv function %tmp.73 :drawArc;
+        %tmp.76 = getv ? :_centerX;
+        %tmp.78 = getv ? :_centerY;
+        %tmp.80 = getv ? :_radius;
+        %tmp.81 = getm $.Toybox.Graphics;
+        %tmp.82 = getv %tmp.81 :ARC_CLOCKWISE;
+        %tmp.83 = 90;
+        %tmp.84 = 90;
+        %tmp.85 = 360;
+        %tmp.87 = lgetv %percent.6;
+        %tmp.88 = 100.0;
+        %tmp.89 = div %tmp.87 %tmp.88;
+        %tmp.90 = mul %tmp.85 %tmp.89;
+        %tmp.91 = sub %tmp.84 %tmp.90;
+        invoke %tmp.73 %tmp.74(%tmp.76, %tmp.78, %tmp.80, %tmp.82, %tmp.83, %tmp.91);
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_72_38_stop:
+        goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_72_20_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_72_20_if_false:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_74_27_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 75 24 ]
+        %tmp.92 = lgetv %dc;
+        %tmp.93 = getv function %tmp.92 :drawArc;
+        %tmp.95 = getv ? :_centerX;
+        %tmp.97 = getv ? :_centerY;
+        %tmp.99 = getv ? :_radius;
+        %tmp.100 = getm $.Toybox.Graphics;
+        %tmp.101 = getv %tmp.100 :ARC_CLOCKWISE;
+        %tmp.102 = 90;
+        %tmp.103 = 0;
+        invoke %tmp.92 %tmp.93(%tmp.95, %tmp.97, %tmp.99, %tmp.101, %tmp.102, %tmp.103);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 76 24 ]
+        %tmp.104 = lgetv %dc;
+        %tmp.105 = getv function %tmp.104 :drawArc;
+        %tmp.107 = getv ? :_centerX;
+        %tmp.109 = getv ? :_centerY;
+        %tmp.111 = getv ? :_radius;
+        %tmp.112 = getm $.Toybox.Graphics;
+        %tmp.113 = getv %tmp.112 :ARC_CLOCKWISE;
+        %tmp.114 = 0;
+        %tmp.115 = 360;
+        %tmp.116 = 360;
+        %tmp.118 = lgetv %percent.6;
+        %tmp.119 = 25.0;
+        %tmp.120 = sub %tmp.118 %tmp.119;
+        %tmp.121 = 100.0;
+        %tmp.122 = div %tmp.120 %tmp.121;
+        %tmp.123 = mul %tmp.116 %tmp.122;
+        %tmp.124 = sub %tmp.115 %tmp.123;
+        invoke %tmp.104 %tmp.105(%tmp.107, %tmp.109, %tmp.111, %tmp.113, %tmp.114, %tmp.124);
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_74_27_stop:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_72_20_if_end:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_51_stop:
+        goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_16_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_16_if_false:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 79 23 ]
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_79_23_if_stmt:
+        %tmp.126 = lgetv %model.2;
+        %tmp.127 = as %tmp.126 { (!PercentModel) };
+        %tmp.129 = getv ? :LabelModel;
+        %tmp.130 = isa %tmp.127 %tmp.129;
+        bf %tmp.130 @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_79_23_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_79_23_if_true:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_79_56_start:
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 81 20 ]
+        [ "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_79_56_start" "D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_79_56_stop" ]
+        %label.7 = local;
+        %tmp.132 = lgetv %model.2;
+        %tmp.133 = as %tmp.132 { (!PercentModel) && (LabelModel) };
+        %tmp.134 = as %tmp.133 LabelModel;
+        %tmp.135 = getv %tmp.134 :label;
+        lputv %label.7 %tmp.135;
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 84 20 ]
+        %tmp.136 = lgetv %dc;
+        %tmp.137 = getv function %tmp.136 :setColor;
+        %tmp.138 = getm $.Toybox.Graphics;
+        %tmp.139 = getv %tmp.138 :COLOR_BLACK;
+        %tmp.140 = getm $.Toybox.Graphics;
+        %tmp.141 = getv %tmp.140 :COLOR_TRANSPARENT;
+        invoke %tmp.136 %tmp.137(%tmp.139, %tmp.141);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 85 20 ]
+        %tmp.142 = lgetv %dc;
+        %tmp.143 = getv function %tmp.142 :drawText;
+        %tmp.145 = getv ? :_centerX;
+        %tmp.146 = 1;
+        %tmp.147 = add %tmp.145 %tmp.146;
+        %tmp.149 = getv ? :_centerY;
+        %tmp.151 = getv ? :_radius;
+        %tmp.152 = .75;
+        %tmp.153 = mul %tmp.151 %tmp.152;
+        %tmp.154 = add %tmp.149 %tmp.153;
+        %tmp.155 = 1;
+        %tmp.156 = add %tmp.154 %tmp.155;
+        %tmp.157 = getm $.Toybox.Graphics;
+        %tmp.158 = getv %tmp.157 :FONT_SYSTEM_TINY;
+        %tmp.160 = lgetv %label.7;
+        %tmp.161 = getm $.Toybox.Graphics;
+        %tmp.162 = getv %tmp.161 :TEXT_JUSTIFY_CENTER;
+        %tmp.163 = getm $.Toybox.Graphics;
+        %tmp.164 = getv %tmp.163 :TEXT_JUSTIFY_VCENTER;
+        %tmp.165 = bitor %tmp.162 %tmp.164;
+        invoke %tmp.142 %tmp.143(%tmp.147, %tmp.156, %tmp.158, %tmp.160, %tmp.165);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 87 20 ]
+        %tmp.166 = lgetv %dc;
+        %tmp.167 = getv function %tmp.166 :setColor;
+        %tmp.169 = lgetv %foregroundColor.1;
+        %tmp.170 = getm $.Toybox.Graphics;
+        %tmp.171 = getv %tmp.170 :COLOR_TRANSPARENT;
+        invoke %tmp.166 %tmp.167(%tmp.169, %tmp.171);
+[ "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc" 88 20 ]
+        %tmp.172 = lgetv %dc;
+        %tmp.173 = getv function %tmp.172 :drawText;
+        %tmp.175 = getv ? :_centerX;
+        %tmp.177 = getv ? :_centerY;
+        %tmp.179 = getv ? :_radius;
+        %tmp.180 = .75;
+        %tmp.181 = mul %tmp.179 %tmp.180;
+        %tmp.182 = add %tmp.177 %tmp.181;
+        %tmp.183 = getm $.Toybox.Graphics;
+        %tmp.184 = getv %tmp.183 :FONT_SYSTEM_TINY;
+        %tmp.186 = lgetv %label.7;
+        %tmp.187 = getm $.Toybox.Graphics;
+        %tmp.188 = getv %tmp.187 :TEXT_JUSTIFY_CENTER;
+        %tmp.189 = getm $.Toybox.Graphics;
+        %tmp.190 = getv %tmp.189 :TEXT_JUSTIFY_VCENTER;
+        %tmp.191 = bitor %tmp.188 %tmp.190;
+        invoke %tmp.172 %tmp.173(%tmp.175, %tmp.182, %tmp.184, %tmp.186, %tmp.191);
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_79_56_stop:
+        goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_79_23_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_79_23_if_end:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_64_16_if_end:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_34_stop:
+        goto @D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_12_if_end;
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_52_12_if_end:
+D_project_time_watchface00_connectiq_apps_master_watchfaces_TypedFace_source_Complications_ComplicatedDrawable_mc_51_47_stop:
+    }
+}
+}
+[ @file = "D:\project_time\watchface00\connectiq-apps-master\watchfaces\TypedFace\source\Complications\ComplicatedDrawable.mc"; @line = 6; ]
+<init> {
+}
