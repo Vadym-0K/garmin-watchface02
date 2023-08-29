@@ -4,15 +4,13 @@ import Toybox.System;
 import Toybox.WatchUi;
 using Toybox.Time;
 using Toybox.Time.Gregorian;
-using Toybox.ActivityMonitor;
 
 
 var myfont = null;
 var lfont = null;
 var mfont = null;
 var bground = null;
-var stepIcon = null;
-var info = ActivityMonitor.getInfo();
+
 
 class watchface01View extends WatchUi.WatchFace {
 
@@ -25,7 +23,6 @@ class watchface01View extends WatchUi.WatchFace {
         lfont = Toybox.WatchUi.loadResource(Rez.Fonts.lfont);
         mfont = Toybox.WatchUi.loadResource(Rez.Fonts.mfont);
         bground = Toybox.WatchUi.loadResource(Rez.Drawables.bground);
-        stepIcon = Toybox.WatchUi.loadResource(Rez.Drawables.stepIcon);
     }
 
     function onUpdate(dc as Dc) as Void {
@@ -61,9 +58,6 @@ class watchface01View extends WatchUi.WatchFace {
         rounded = (rounded > 21) ? (rounded/20 -1) * 10 : rounded/20 ;
         dc.setPenWidth(10);
         dc.drawLine(10, 112, 10, 112 - rounded);
-
-        if (info.steps >= info.stepGoal) {dc.drawBitmap(48, 21, stepIcon);}
-
 
     }
 

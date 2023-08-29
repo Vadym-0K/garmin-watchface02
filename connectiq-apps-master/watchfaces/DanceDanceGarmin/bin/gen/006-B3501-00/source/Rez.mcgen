@@ -1,0 +1,63 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var LauncherIcon as Symbol;
+
+        class background extends WatchUi.Drawable {
+
+            function initialize() {
+                Drawable.initialize({});
+            }
+
+            function draw(dc as Graphics.Dc) as Void {
+                if (self has :isVisible) {
+                    if (!self.isVisible) {
+                        return;
+                    }
+                }
+
+                dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+                dc.fillRectangle((0 + 0), (0 + 0), (260 - 0), (260 - 0));
+                dc.setColor(Graphics.COLOR_TRANSPARENT, Graphics.COLOR_WHITE);
+
+            }
+        }
+
+        (:initialized) var dancers as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_custom_drawable_background = new $.Rez.Drawables.background();
+            if (rez_cmp_local_custom_drawable_background.identifier == null) {
+                rez_cmp_local_custom_drawable_background.identifier = "background";
+            }
+
+            var rez_cmp_local_text_TimeLabel = new WatchUi.Text({:identifier=>"TimeLabel", :color=>Graphics.COLOR_BLUE, :locX=>(260 * 0.5), :locY=>((260 - dc.getFontHeight(Graphics.FONT_NUMBER_THAI_HOT)) * 0.5), :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_NUMBER_THAI_HOT});
+
+            return [rez_cmp_local_custom_drawable_background, rez_cmp_local_text_TimeLabel] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Menus {
+    } // Menus
+
+    module Strings {
+        (:initialized) var StepGoal as Symbol;
+        (:initialized) var FloorsClimbedGoal as Symbol;
+        (:initialized) var GenericGoal as Symbol;
+        (:initialized) var ActiveMinutesGoal as Symbol;
+        (:initialized) var AppName as Symbol;
+    } // Strings
+} // Rez
